@@ -14,6 +14,7 @@ import screenplay.user_interface.N11UserMainPageElements;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotEmpty;
 
 
 public class LoginAsUser implements Task{
@@ -46,7 +47,6 @@ public class LoginAsUser implements Task{
                 Click.on(N11UserMainPageElements.CONTRACT_CHECK_BOX),
                 Click.on(N11UserMainPageElements.MARKETIN_APPROVAL_CHECK_BOX),
                 Click.on(N11UserMainPageElements.CONTRACT_CONFIRM_BUTTON),
-                Click.on(N11UserMainPageElements.CONTRACT_POPUP_CLOSE_BUTTON),
                 WaitUntil.the(N11UserMainPageElements.USER_ACC_LINK,isClickable()).forNoMoreThan(5).seconds()
         );
     }
